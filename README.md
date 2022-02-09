@@ -53,6 +53,7 @@ Nesse momento está acontecendo um enorme incêndio, muitos estão indo ao local
 Após o incêndio, e depois de todo aquele calor, ele fica com muita sede e descobre que nesse universo as bebidas não são cobradas, ele então para beber 
 
 •	Água 
+
 •	Vinho
 
 Nesse momento não existe a escolha certa, afinal ninguém é de ferro...
