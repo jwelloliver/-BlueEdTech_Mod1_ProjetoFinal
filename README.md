@@ -24,36 +24,32 @@ Após um longo dia, Gale chega em casa, em meio uma tempestade. Como de costume 
 
 Aqui usuario sera questionado qual escolha para o personagem:
 
-•	Dorme
-•	Acende uma lanterna
+• Dorme • Acende uma lanterna
 
 Se usuario escolher opçao abaixo:
 
-- Dorme: Gale resolve então deitar para descansar, pois seus dias costumam ser longos e ele tem uma rotina a cumprir.
+Dorme: Gale resolve então deitar para descansar, pois seus dias costumam ser longos e ele tem uma rotina a cumprir.
 
-- Acender a lanterna: A lanterna é mágica e levou ele há um Universo Paralelo, no qual existe uma missão a ser cumprida, o que ele deve fazer?
+Acender a lanterna: A lanterna é mágica e levou ele há um Universo Paralelo, no qual existe uma missão a ser cumprida, o que ele deve fazer?
 
 Aqui usuario sera questionado se:
 
-*  Realizar a Missão
+Realizar a Missão
 
-* Apagar a lanterna e voltar a tempestade da vida (mesma msg da opção dormir)
+Apagar a lanterna e voltar a tempestade da vida (mesma msg da opção dormir)
 
-Se Escolher Realizar Missão:
+Para realizar a missão escolha um elemento:
 
-Ótima escolha! 
+Elemento FOGO Elemento ÁGUA
 
-Sua missão é manter o Universo que está sendo destruído por atitudes impensadas...
+Ótima escolha!
 
-Nesse momento está acontecendo um enorme incêndio, muitos estão indo ao local, e Gale também está perto dali, então ele:
+FOGO: Você foi enviado, pois a sua lanterna mágica era a única que podia acabar com a tempestade que estava causando um diluvio, com sua presença o sol voltou a brilhar e a água já está em nível adequado, para o seu planeta não acabar.
 
-- Vai para o local e se coloca a disposição para ser voluntário e ajuda a combater o fogo.
-- Vai para o local, afinal todos estão comentando e ele quer ver de perto.  ( pode terminar com a msg que depois disso a lanterna se apaga e ele volta a dormir)
+ÁGUA: Nesse momento o UNIVERSO está sendo destruído pelo fogo, consequência da poluição e desmatamento causado pelos seres humanos de seu mundo. Mas que bom que voê está aqui, pois sua lanterna mágica, filtrou toda a poluição e trouxe a chuva para apagar o fogo e fazer florescer novamente as matas.
 
-Após o incêndio, e depois de todo aquele calor, ele fica com muita sede e descobre que nesse universo as bebidas não são cobradas, ele então para beber 
+PARABÉNS sua missão foi cumprida com êxito, escolha agora sua recompensa:
 
-•	Água 
+ELEMENTO FOGO ELEMENTO ÁGUA
 
-•	Vinho
-
-Nesse momento não existe a escolha certa, afinal ninguém é de ferro...
+FOGO / AGUA: Aproveitando sua passagem por aqui, você ganhou um voucher para umas férias de 60 dias com tudo o que há de bom e melhor! Pena que sua lanterna está acabando a bateria... Fica pra uma próxima.

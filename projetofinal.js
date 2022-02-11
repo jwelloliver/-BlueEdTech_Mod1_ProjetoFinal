@@ -8,7 +8,9 @@ const jogador = {
 };
 
 console.log('\n Após um longo dia, Gale chega em casa, em meio uma tempestade. Como de costume vai tomar seu banho, ao terminar o banho acaba a energia, então ele...\n');
+
 console.log(' Desejar ir Dormir ou Acender Uma lanterna ?\n ')
+
 jogador.statusJogador = prompt(' Digite entre opções Dormir Ou laterna: ').toUpperCase();
 
 while (jogador.statusJogador != 'DORMIR' && jogador.statusJogador != 'LANTERNA') {
