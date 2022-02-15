@@ -2,15 +2,28 @@ var prompt = require("prompt-sync")();
 
 //Declaração de váriaveis e funções
 
+const personagem = {
+  Nome: "Michael",
+  Sede: 100,
+  Fome: 100,
+  Vida: 100,
+};
+
+const periodos = ["PRIMEIRA-SEMANA", "SEGUNDA-SEMANA", "TERCEIRA-SEMANA"];
+
+const pausa = () => prompt(`Precione ENTER para continuar!`);
+
+const escolhaErrada = () => console.log(`Você digitou uma opção incorreta!`);
 
 function statusAtuais(michael) {
   console.log();
   console.log(`STATUS ATUAIS:`);
   console.table(michael);
 }
+
+let novoJogo = 0;
 function fimJogo() {
-  
-  let escolha = prompt(`Deseja jogar novamente? SIM ou NAO: `)
+  let escolha = prompt(`Deseja voltar para o começo da ${periodos[i]}? SIM ou NAO: `)
     .toUpperCase()
     .trim();
   console.clear();
@@ -22,15 +35,12 @@ function fimJogo() {
       .trim();
     console.clear();
   }
-  if (escolha == "SIM") {
-    novoJogo = 0;
-  } else {
-    return novoJogo = 1;
+  if (escolha == "NAO") {
+    novoJogo = 1;
   }
 }
 
 function introducao() {
-
   console.clear();
   console.log(`O jogo se chama SOBREVIVA!
 Primeiramente vamos lhe apresentar o personagem e seus status:`);
@@ -68,6 +78,7 @@ Você cria o machado ou segue andando sem rumo em busca de algum alimento?`);
     console.log(`Michael morre devido ao seu enorme tombo!`);
     fimJogo();
   } else {
+    i++;
     personagem.Sede = 40;
     personagem.Fome = 50;
     console.log(
@@ -99,10 +110,11 @@ function segundaParte() {
   console.clear();
 
   console.log(
-    `Michael observa mais a frente uma floresta mais densa onde a probablidade de encontrar água potável seria maior.`
+    `Michael observa mais a frente uma floresta mais densa onde a probablidade de encontrar água potável seria maior.
+    Deseja se aventurar pela floresta ou continuar sua busca no local onde está? `
   );
   let segundaEscolha = prompt(
-    `Deseja se aventurar pela floresta ou continuar sua busca no local onde está? Responda com SIM ou NAO: `
+    `Digite SIM se deseja se aventurar pela floresta, ou NAO para ficar no lugar onde está: `
   )
     .toUpperCase()
     .trim();
@@ -110,7 +122,7 @@ function segundaParte() {
   while (segundaEscolha != "SIM" && segundaEscolha != "NAO") {
     escolhaErrada();
     segundaEscolha = prompt(
-      `Deseja se aventurar pela floresta ou continuar sua busca no local onde está? Responda com SIM ou NAO: `
+      `Digite SIM se deseja se aventurar pela floresta, ou NAO para ficar no lugar onde está: `
     )
       .toUpperCase()
       .trim();
@@ -126,6 +138,7 @@ function segundaParte() {
     );
     fimJogo();
   } else {
+    i++;
     console.log(`Ao se aventurar pela floresta houveram alguns contratempos como arranhões e torções aparentemente nada tão ruim.
     Mas ele tira a sorte grande encontrando uma grande nascente por ali.`);
     personagem.Sede = 100;
@@ -152,27 +165,28 @@ function terceiraParte() {
   console.log(
     `Michael estava muito cansado e não sabia se era melhor sair em busca de alguma erva medicinal ou simplesmente descansava para se recuperar.`
   );
-  let terceiraEscolha = prompt(`Escolha entre, SAIR ou DESCANSAR: `)
+  let terceiraEscolha = prompt(`Escolha entre, BUSCAR ou DESCANSAR: `)
     .toUpperCase()
     .trim();
   console.clear();
-  while (terceiraEscolha != "SAIR" && terceiraEscolha != "DESCANSAR") {
+  while (terceiraEscolha != "BUSCAR" && terceiraEscolha != "DESCANSAR") {
     escolhaErrada();
-    terceiraEscolha = prompt(`Escolha entre, SAIR ou DESCANSAR: `)
+    terceiraEscolha = prompt(`Escolha entre, BUSCAR ou DESCANSAR: `)
       .toUpperCase()
       .trim();
     console.clear();
   }
-  if (terceiraEscolha == "SAIR") {
+  if (terceiraEscolha == "BUSCAR") {
     console.log(`Por mais que Michael tivesse algum conhecimento sobre ervas medicinais em um livro em que havia lido
     ele não consegue encontrar nenhuma em sua cansativa busca e desmaia de exaustão!`);
     personagem.Vida = 0;
     statusAtuais(personagem);
-    console.log(`Michael morre devido ao seu desgaste e intoxicação!`)
+    console.log(`Michael morre devido ao seu desgaste e intoxicação!`);
     fimJogo();
-  }else {
+  } else {
+    i++;
     console.log(`As vezes a melhor opção é realmente só descansar e esperar. 
-    Após 2 dias Michael acorda e sente completamente renovado!`)
+    Após 2 dias Michael acorda e sente completamente renovado!`);
     personagem.Vida = 100;
     statusAtuais(personagem);
     pausa();
@@ -181,50 +195,40 @@ function terceiraParte() {
     No fim ele descobre que era tudo um reality show financiado por milhonários malucos que só queriam se entreter com seu sofrimento.
     Mas Michael no fim recebe um prêmio de 2 milhões um agrado por todo "entretenimento" que concedeu aos milhonários!`);
     console.log();
-    console.log(`Parabéns por sobreviver até aqui!`)
+    console.log(`Parabéns por sobreviver até aqui!`);
     fimJogo();
   }
 }
 
 //Começo do JOGO
-const personagem = {
-  Nome: "Michael",
-  Sede: 100,
-  Fome: 100,
-  Vida: 100,
-};
-
-const periodos = ["PRIMEIRA-SEMANA:", "SEGUNDA-SEMANA:", "TERCEIRA-SEMANA:"];
-
-const pausa = () => prompt(`Precione ENTER para continuar!`);
-
-const escolhaErrada = () => console.log(`Você digitou uma opção incorreta!`);
-
-let novoJogo = 0;
 
 while (novoJogo == 0) {
-
   personagem.Sede = 100;
   personagem.Fome = 100;
   personagem.Vida = 100;
   introducao();
-
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 3; ) {
     if (i == 0) {
       console.log(periodos[i]);
       console.log();
       primeiraParte();
-    
+      if (novoJogo == 1) {
+        break;
+      }
     } else if (i == 1) {
       console.log(periodos[i]);
       console.log();
       segundaParte();
-    
-    }else if(i == 2){
+      if (novoJogo == 1) {
+        break;
+      }
+    } else if (i == 2) {
       console.log(periodos[i]);
       console.log();
       terceiraParte();
-    
+      if (novoJogo == 0) {
+        break;
+      }
     }
   }
 }
