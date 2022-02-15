@@ -29,7 +29,7 @@ function statusAtuais(michael) {
 let novoJogo = 0;
 function fimJogo() {
   let escolha = prompt(
-    `Deseja voltar para o começo do ${periodos[i]}? SIM ou NAO: `
+    `Deseja voltar para o começo da ${periodos[i]}? SIM ou NAO: `
   )
     .toUpperCase()
     .trim();
@@ -58,8 +58,8 @@ Primeiramente vamos lhe apresentar o personagem e seus status:`);
 }
 
 function primeiraParte() {
-  console.log(`Nossa história começa com Michael acordando em uma ilha completamente desconhecida. 
-Michael olha para os lados e encontra algumas pedras afiadas, tiras de couro e pedaços de madeira. 
+  console.log(`Nossa história começa com Michael acordando em uma ilha completamente desconhecida.
+Michael olha para os lados e encontra algumas pedras afidas, tiras de couro e pedaços de madeira. 
 O que lhe dá a ideia de criar um machado improvisado para ajudar nesse início de jornada.
 Você cria o machado ou segue andando sem rumo em busca de algum alimento?`);
 
@@ -89,16 +89,13 @@ Você cria o machado ou segue andando sem rumo em busca de algum alimento?`);
     personagem.Sede = 40;
     personagem.Fome = 50;
     console.log(
-      `Enquanto fazia seu machado Michael sente seu estomago roncar e sua garganta secar. 
-    Mas já com algum equipamento em mão decide continuar sua jornada`
+      `Enquanto fazia seu machado Michael sente seu estomago roncar e sua garganta secar.\nMas já com algum equipamento em mão decide continuar sua jornada`
     );
     statusAtuais(personagem);
     pausa();
     console.clear();
     console.log(
-      `Após quase uma semana na ilha, Michael ainda sofre muito para poder sobreviver.
-      Ele encontra algumas frutas e consegue pegar alguns animais com seu machado.
-      Mas a falta de água ainda era um grande problema.`
+      `Após quase uma semana na ilha, Michael ainda sofre muito para poder sobreviver.\nEle encontra algumas frutas e consegue pegar alguns animais com seu machado.\nMas a falta de água ainda era um grande problema.`
     );
     personagem.Fome = 100;
     personagem.Sede = 25;
@@ -117,8 +114,7 @@ function segundaParte() {
   console.clear();
 
   console.log(
-    `Michael observa mais a frente uma floresta mais densa onde a probablidade de encontrar água potável seria maior.
-    Deseja se aventurar pela floresta ou continuar sua busca no local onde está? `
+    `Michael observa mais a frente uma floresta mais densa onde a probablidade de encontrar água potável seria maior.\nDeseja se aventurar pela floresta ou continuar sua busca no local onde está? `
   );
   let segundaEscolha = prompt(
     `Digite SIM se deseja se aventurar pela floresta, ou NAO para ficar no lugar onde está: `
@@ -136,8 +132,9 @@ function segundaParte() {
     console.clear();
   }
   if (segundaEscolha == "NAO") {
-    console.log(`Michael fica alguns dias rodando pelo mesmo lugar em busca de água potável mas infelizmente sua busca se prova inútil.
-    Ele não consegue suportar forte calor e acaba desmaiando fortemente desidratado`);
+    console.log(
+      `Michael fica alguns dias rodando pelo mesmo lugar em busca de água potável mas infelizmente sua busca se prova inútil.\nEle não consegue suportar forte calor e acaba desmaiando fortemente desidratado`
+    );
     personagem.Sede = 0;
     statusAtuais(personagem);
     console.log(
@@ -146,8 +143,9 @@ function segundaParte() {
     fimJogo();
   } else {
     i++;
-    console.log(`Ao se aventurar pela floresta houveram alguns contratempos como arranhões e torções aparentemente nada tão ruim.
-    Mas ele tira a sorte grande encontrando uma grande nascente por ali.`);
+    console.log(
+      `Ao se aventurar pela floresta houveram alguns contratempos como arranhões e torções aparentemente nada tão ruim.\nMas ele tira a sorte grande encontrando uma grande nascente por ali.`
+    );
     personagem.Sede = 100;
     statusAtuais(personagem);
     pausa();
@@ -163,14 +161,15 @@ function terceiraParte() {
   statusAtuais(personagem);
   pausa();
   console.clear();
-  console.log(`Michael decide que precisa contruir rapidamente um lugar para se recuperar antes que a sua situação piore.
-  Usando novas ferramentas que criou ao longo desses dias, ele rapidamente constrói um abrigo, mas a sua condição só piora.`);
+  console.log(
+    `Michael decide que precisa contruir rapidamente um lugar para se recuperar antes que a sua situação piore.\nUsando novas ferramentas que criou ao longo desses dias ele rapidamente constrói um abrigo, mas a sua condição só piorava.`
+  );
   personagem.Vida = 40;
   statusAtuais(personagem);
   pausa();
   console.clear();
   console.log(
-    `Michael estava muito cansado e não sabia se era melhor sair em busca de alguma erva medicinal ou se simplesmente descansava para se recuperar.`
+    `Michael estava muito cansado e não sabia se era melhor sair em busca de alguma erva medicinal ou simplesmente descansava para se recuperar.`
   );
   let terceiraEscolha = prompt(`Escolha entre, BUSCAR ou DESCANSAR: `)
     .toUpperCase()
@@ -184,35 +183,39 @@ function terceiraParte() {
     console.clear();
   }
   if (terceiraEscolha == "BUSCAR") {
-    console.log(`Por mais que Michael tivesse algum conhecimento sobre ervas medicinais em livros que havia lido,
-    ele não consegue encontrar nenhuma em sua cansativa busca e desmaia de exaustão!`);
+    console.log(
+      `Por mais que Michael tivesse algum conhecimento sobre ervas medicinais em um livro em que havia lido,\nele não consegue encontrar nenhuma em sua cansativa busca e desmaia de exaustão!`
+    );
     personagem.Vida = 0;
     statusAtuais(personagem);
     console.log(`Michael morre devido ao seu desgaste e intoxicação!`);
     fimJogo();
   } else {
     i++;
-    console.log(`As vezes a melhor opção é realmente só descansar e esperar. 
-    Após 2 dias Michael acorda e sente completamente renovado!`);
+    console.log(
+      `As vezes a melhor opção é realmente só descansar e esperar. \nApós 2 dias Michael acorda e sente completamente renovado!`
+    );
     personagem.Vida = 100;
     statusAtuais(personagem);
     pausa();
-    console.clear();
-    console.log(`Ao chegar ao final da ${periodos[2]} um helicóptero surge do nada e resgata Michael da ilha. 
-    No fim ele descobre que era tudo um reality show, financiado por milhonários malucos que só queriam \n se entreter com seu sofrimento.
-    Mas Michael no fim recebe um prêmio de 2 milhões, um agrado por todo "entretenimento" que concedeu aos milhonários!`);
-    console.log();
-    console.log(`Parabéns por sobreviver até aqui!`);
-
-    fimJogo();
   }
+}
+function finalDaHistoria() {
+  console.clear();
+  console.log(
+    `Ao chegar ao final da ${periodos[2]} um helicóptero surge do nada e resgata Michael da ilha.\nNo fim ele descobre que era tudo um reality show financiado por milhonários malucos que só queriam se entreter com seu sofrimento.\nMas Michael no fim recebe um prêmio de 2 milhões um agrado por todo "entretenimento" que concedeu aos milhonários!`
+  );
+  console.log();
+  console.log(`Parabéns por sobreviver até aqui!`);
+  return fimJogo();
+  i++;
 }
 
 //Começo do JOGO
 
 while (novoJogo == 0) {
   introducao();
-  for (i = 0; i < 4; ) {
+  for (i = 0; i < 5; ) {
     personagem.Sede = 100;
     personagem.Fome = 100;
     personagem.Vida = 100;
@@ -234,7 +237,15 @@ while (novoJogo == 0) {
       console.log(periodos[i]);
       console.log();
       terceiraParte();
-      if (novoJogo == 0) {
+      if (novoJogo == 1) {
+        break;
+      }
+    } else if (i == 3) {
+      console.log();
+      finalDaHistoria();
+      if (novoJogo == 1) {
+        break;
+      } else {
         break;
       }
     }
