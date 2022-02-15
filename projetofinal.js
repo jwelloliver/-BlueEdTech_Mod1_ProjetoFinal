@@ -9,7 +9,12 @@ const personagem = {
   Vida: 100,
 };
 
-const periodos = ["PRIMEIRA-SEMANA", "SEGUNDA-SEMANA", "TERCEIRA-SEMANA"];
+const periodos = [
+  "PRIMEIRA-SEMANA",
+  "SEGUNDA-SEMANA",
+  "TERCEIRA-SEMANA",
+  "INICIO DO JOGO",
+];
 
 const pausa = () => prompt(`Precione ENTER para continuar!`);
 
@@ -23,7 +28,9 @@ function statusAtuais(michael) {
 
 let novoJogo = 0;
 function fimJogo() {
-  let escolha = prompt(`Deseja voltar para o começo da ${periodos[i]}? SIM ou NAO: `)
+  let escolha = prompt(
+    `Deseja voltar para o começo do ${periodos[i]}? SIM ou NAO: `
+  )
     .toUpperCase()
     .trim();
   console.clear();
@@ -52,7 +59,7 @@ Primeiramente vamos lhe apresentar o personagem e seus status:`);
 
 function primeiraParte() {
   console.log(`Nossa história começa com Michael acordando em uma ilha completamente desconhecida. 
-Michael olha para os lados e encontra algumas pedras afidas, tiras de couro e pedaços de madeira. 
+Michael olha para os lados e encontra algumas pedras afiadas, tiras de couro e pedaços de madeira. 
 O que lhe dá a ideia de criar um machado improvisado para ajudar nesse início de jornada.
 Você cria o machado ou segue andando sem rumo em busca de algum alimento?`);
 
@@ -157,13 +164,13 @@ function terceiraParte() {
   pausa();
   console.clear();
   console.log(`Michael decide que precisa contruir rapidamente um lugar para se recuperar antes que a sua situação piore.
-  Usando novas ferramentas que criou ao longo desses dias ele rapidamente contrói um abrigo, mas a sua condição só piorava.`);
+  Usando novas ferramentas que criou ao longo desses dias, ele rapidamente constrói um abrigo, mas a sua condição só piora.`);
   personagem.Vida = 40;
   statusAtuais(personagem);
   pausa();
   console.clear();
   console.log(
-    `Michael estava muito cansado e não sabia se era melhor sair em busca de alguma erva medicinal ou simplesmente descansava para se recuperar.`
+    `Michael estava muito cansado e não sabia se era melhor sair em busca de alguma erva medicinal ou se simplesmente descansava para se recuperar.`
   );
   let terceiraEscolha = prompt(`Escolha entre, BUSCAR ou DESCANSAR: `)
     .toUpperCase()
@@ -177,7 +184,7 @@ function terceiraParte() {
     console.clear();
   }
   if (terceiraEscolha == "BUSCAR") {
-    console.log(`Por mais que Michael tivesse algum conhecimento sobre ervas medicinais em um livro em que havia lido
+    console.log(`Por mais que Michael tivesse algum conhecimento sobre ervas medicinais em livros que havia lido,
     ele não consegue encontrar nenhuma em sua cansativa busca e desmaia de exaustão!`);
     personagem.Vida = 0;
     statusAtuais(personagem);
@@ -192,10 +199,11 @@ function terceiraParte() {
     pausa();
     console.clear();
     console.log(`Ao chegar ao final da ${periodos[2]} um helicóptero surge do nada e resgata Michael da ilha. 
-    No fim ele descobre que era tudo um reality show financiado por milhonários malucos que só queriam se entreter com seu sofrimento.
-    Mas Michael no fim recebe um prêmio de 2 milhões um agrado por todo "entretenimento" que concedeu aos milhonários!`);
+    No fim ele descobre que era tudo um reality show, financiado por milhonários malucos que só queriam \n se entreter com seu sofrimento.
+    Mas Michael no fim recebe um prêmio de 2 milhões, um agrado por todo "entretenimento" que concedeu aos milhonários!`);
     console.log();
     console.log(`Parabéns por sobreviver até aqui!`);
+
     fimJogo();
   }
 }
@@ -203,11 +211,11 @@ function terceiraParte() {
 //Começo do JOGO
 
 while (novoJogo == 0) {
-  personagem.Sede = 100;
-  personagem.Fome = 100;
-  personagem.Vida = 100;
   introducao();
-  for (i = 0; i < 3; ) {
+  for (i = 0; i < 4; ) {
+    personagem.Sede = 100;
+    personagem.Fome = 100;
+    personagem.Vida = 100;
     if (i == 0) {
       console.log(periodos[i]);
       console.log();
