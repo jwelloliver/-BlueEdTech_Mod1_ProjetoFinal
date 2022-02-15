@@ -2,27 +2,14 @@ var prompt = require("prompt-sync")();
 
 //Declaração de váriaveis e funções
 
-const personagem = {
-  Nome: "Michael",
-  Sede: 100,
-  Fome: 100,
-  Vida: 100,
-};
-
-const periodos = ["PRIMEIRA-SEMANA:", "SEGUNDA-SEMANA:", "TERCEIRA-SEMANA:"];
-
-const pausa = () => prompt(`Precione ENTER para continuar!`);
-
-const escolhaErrada = () => console.log(`Você digitou uma opção incorreta!`);
 
 function statusAtuais(michael) {
   console.log();
   console.log(`STATUS ATUAIS:`);
   console.table(michael);
 }
-
-let novoJogo = 0;
 function fimJogo() {
+  
   let escolha = prompt(`Deseja jogar novamente? SIM ou NAO: `)
     .toUpperCase()
     .trim();
@@ -43,6 +30,7 @@ function fimJogo() {
 }
 
 function introducao() {
+
   console.clear();
   console.log(`O jogo se chama SOBREVIVA!
 Primeiramente vamos lhe apresentar o personagem e seus status:`);
@@ -199,28 +187,44 @@ function terceiraParte() {
 }
 
 //Começo do JOGO
+const personagem = {
+  Nome: "Michael",
+  Sede: 100,
+  Fome: 100,
+  Vida: 100,
+};
+
+const periodos = ["PRIMEIRA-SEMANA:", "SEGUNDA-SEMANA:", "TERCEIRA-SEMANA:"];
+
+const pausa = () => prompt(`Precione ENTER para continuar!`);
+
+const escolhaErrada = () => console.log(`Você digitou uma opção incorreta!`);
+
+let novoJogo = 0;
 
 while (novoJogo == 0) {
+
   personagem.Sede = 100;
   personagem.Fome = 100;
   personagem.Vida = 100;
   introducao();
-  for (i = 0; i < 3; ) {
+
+  for (i = 0; i < 3; i++) {
     if (i == 0) {
       console.log(periodos[i]);
       console.log();
       primeiraParte();
-      i++;
+    
     } else if (i == 1) {
       console.log(periodos[i]);
       console.log();
       segundaParte();
-      i++;
+    
     }else if(i == 2){
       console.log(periodos[i]);
       console.log();
       terceiraParte();
-      i++
+    
     }
   }
 }
