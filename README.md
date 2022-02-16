@@ -21,6 +21,8 @@ Você irá criar um jogo de ficção interativa que simule a rotina diária de u
 ## Trabalho em equipe
 
 ### Equipe 10º
--- Bianca Novaes
--- Leandro Spitzer
--- Wellington Oliveira
+-Bianca Novaes
+
+-Leandro Spitzer
+
+-Wellington Oliveira
