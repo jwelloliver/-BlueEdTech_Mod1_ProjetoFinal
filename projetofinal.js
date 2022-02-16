@@ -1,6 +1,6 @@
 var prompt = require("prompt-sync")();
 
-//Declaração de váriaveis e funções
+//Declaração do personagem como objeto onde se encontra os valores correspondente ao status do mesmo.
 
 const personagem = {
   Nome: "Michael",
@@ -8,24 +8,26 @@ const personagem = {
   Fome: 100,
   Vida: 100,
 };
-
+// Lista onde se encotra os valores da periodo que se passa o jogo.
 const periodos = [
   "PRIMEIRA-SEMANA",
   "SEGUNDA-SEMANA",
   "TERCEIRA-SEMANA",
   "INICIO DO JOGO",
 ];
-
+// uma Arrow functions para criar uma pausa no jogo.
 const pausa = () => prompt(`Precione ENTER para continuar!`);
 
+// uma Arrow functions para quando usuario digitar opção errada, imprimir na tela.
 const escolhaErrada = () => console.log(`Você digitou uma opção incorreta!`);
 
+// Função para impressão na tela em forma de tabela do status do jogador.
 function statusAtuais(michael) {
   console.log();
   console.log(`STATUS ATUAIS:`);
   console.table(michael);
 }
-
+// Variavel para iniciar o jogo no laço while.
 let novoJogo = 0;
 function fimJogo() {
   let escolha = prompt(
