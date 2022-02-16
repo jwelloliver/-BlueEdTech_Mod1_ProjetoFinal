@@ -59,6 +59,5 @@ Um jogo de sobrevivencia, com personagem Michael, que acorda completamente desor
   "INICIO DO JOGO",
 ];
  ```
-
-
- - Para cada periodo do jogo foi criado funçoes que dentro dela tera metodos e chamara outras funçoes
+   
+   Para cada periodo do jogo foi criado funçoes que dentro dela tera metodos e chamara outras funçoes
