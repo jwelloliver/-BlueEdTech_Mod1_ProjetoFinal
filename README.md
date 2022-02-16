@@ -31,4 +31,6 @@ Você irá criar um jogo de ficção interativa que simule a rotina diária de u
 Jogo criado em JavaScript, rodar no Nodejs.
 
 ### Historia do Jogo
-Um jogo de sobrevivencia, com personagem Michael, que acorda completamente desorientado em uma ilha sem saber como e o porque foi para ali, na qual ele tenta sobriviver por tres semanas, atras de alimentos, agua e abrigo. Interação Onde usuario ira fazer as escolhas por Michael, escolha essas dificeis que leva a sobrevivencia ou nao do personagem.
+Um jogo de sobrevivencia, com personagem Michael, que acorda completamente desorientado em uma ilha sem saber como e o porque foi para ali, na qual ele tenta sobreviver por tres semanas, atras de alimentos, agua e abrigo. Interação Onde usuario ira fazer as escolhas por Michael, escolha essas dificeis que leva a sobrevivencia ou nao do personagem.
+
+### Criação do codigo para interação
