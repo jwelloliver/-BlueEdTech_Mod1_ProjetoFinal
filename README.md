@@ -33,4 +33,17 @@ Jogo criado em JavaScript, rodar no Nodejs.
 ### Historia do Jogo
 Um jogo de sobrevivencia, com personagem Michael, que acorda completamente desorientado em uma ilha sem saber como e o porque foi para ali, na qual ele tenta sobreviver por tres semanas, atras de alimentos, agua e abrigo. Interação Onde usuario ira fazer as escolhas por Michael, escolha essas dificeis que leva a sobrevivencia ou nao do personagem.
 
-### Criação do codigo para interação
+### Criação do codigo para interação com usuario
+
+ - Criamos um Objeto, com chaves e valores para controle do status do personagem.
+ ```javascript
+ 
+ const personagem = { // Objeto Personagem.
+  Nome: "Michael",// chave Nome, atribuimos um valor tipo string 'Michael' para nome do personagem.
+  Sede: 100,// Chave Sede, atribuimos um valor tipo number, para controle de status sede do personagem
+  Fome: 100,// Chave Fome, atribuimos um valor tipo number, para controle de status fome do personagem
+  Vida: 100,// Chave Vida, atribuimos um valor tipo number, para controle de status Vida do personagem
+};
+ 
+ ```
+caso usuario venha a zerar os valores das chaves Sede, Fome, Vida, do personagem, sera fim do jogo.
