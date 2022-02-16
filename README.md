@@ -60,4 +60,16 @@ Um jogo de sobrevivencia, com personagem Michael, que acorda completamente desor
 ];
  ```
    
-   Para cada periodo do jogo foi criado funçoes que dentro dela tera metodos e chamara outras funçoes
+   Para cada periodo do jogo foi criado funçoes que dentro dela tera metodos e chamara outras funçoes.
+
+ - Criamos ArrayFunctions, um para pausa, que usuario leia o textos descritivos do jogo e veja impressao do status do personagem, e outra para impressão de escolha errada quando usuario digitar opçaoes.
+
+ ```javascript
+ // uma Arrow functions para criar uma pausa no jogo.
+ const pausa = () => prompt(`Precione ENTER para continuar!`);
+
+ // uma Arrow functions para quando usuario digitar a escolha incorreta, imprimir na tela.
+ const escolhaErrada = () => console.log(`Você digitou uma opção incorreta!`);
+ 
+ ```
+   uma forma de usar tudo aquilo que apredemos durante o modulo 1.
