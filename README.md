@@ -25,3 +25,9 @@ Você irá criar um jogo de ficção interativa que simule a rotina diária de u
 - Leandro Spitzer
 
 - Wellington Oliveira
+
+## Desenvolvimento do Jogo
+
+Jogo criado em JavaScript, rodar no Nodejs.
+
+### Historia do Jogo
