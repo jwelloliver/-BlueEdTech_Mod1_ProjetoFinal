@@ -49,6 +49,7 @@ Um jogo de sobrevivencia, com personagem Michael, que acorda completamente desor
    caso usuario venha a zerar os valores das chaves Sede, Fome, Vida, do personagem, sera fim do jogo.
 
 
+
  - Criamos uma Array para Armazenar o perido que personagem se encontra dentro do jogo.
  ```javascript
  const periodos = [
@@ -58,3 +59,6 @@ Um jogo de sobrevivencia, com personagem Michael, que acorda completamente desor
   "INICIO DO JOGO",
 ];
  ```
+
+
+ - Para cada periodo do jogo foi criado funçoes que dentro dela tera metodos e chamara outras funçoes
