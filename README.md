@@ -18,9 +18,8 @@ Você irá criar um jogo de ficção interativa que simule a rotina diária de u
 - Funções para executar cada uma das tarefas (1,5 ponto);
 - Conteúdo de condicionais, laços, funções e objetos bem aplicados (2,0 pontos);
 
-### Trabalho em equipe
+### Trabalho em equipe, Equipe 10º
 
-### Equipe 10º
 - Bianca Novaes
 
 - Leandro Spitzer
